@@ -1,6 +1,4 @@
-package org.launchcode.techjobs_oo;
-
-import java.util.Objects;
+package src.org.launchcode.techjobs_oo;
 
 public abstract class JobField {
     private int id;

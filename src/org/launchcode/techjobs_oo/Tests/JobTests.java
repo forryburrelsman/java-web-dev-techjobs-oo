@@ -1,11 +1,11 @@
-package org.launchcode.techjobs_oo.Tests;
+package src.org.launchcode.techjobs_oo.Tests;
 
 import org.junit.Test;
+import src.org.launchcode.techjobs_oo.*;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
-import org.junit.Before;
-import org.launchcode.techjobs_oo.*;
 
 public class JobTests {
 //Job testJob;
