@@ -22,7 +22,6 @@ public class JobTests {
             Job testJobTwo = new Job();
         int iDOne = testJobOne.getId();
         int iDTwo = testJobTwo.getId();
-        testJobTwo.getId();
         assertTrue(iDOne + 1 == iDTwo);
         assertFalse(iDOne == iDTwo);
     }
@@ -35,8 +34,6 @@ public class JobTests {
         assertTrue(testJob.getLocation().getValue() == "Desert");
         assertTrue(testJob.getPositionType().getValue() == "Quality control");
         assertTrue(testJob.getCoreCompetency().getValue() == "Persistence");
-        assertEquals(testJob.getId(), 4);
-        //assertFalse(testJob.getId() != 1);
         assertTrue(testJob instanceof Job);
         assertTrue(testJob.getName() instanceof String);
         assertTrue(testJob.getEmployer() instanceof Employer);
@@ -69,14 +66,12 @@ public class JobTests {
                                 "\n" + "Location: " + testJob.getLocation() + "\n" + "Position Type: " +
                                 testJob.getPositionType() + "\n" + "Core Competency: " +
                                 testJob.getCoreCompetency() + "\n"));
-        //System.out.println(testJob.toString());
     }
 
     @Test
     public void testEmptyFieldToString() {
         //if a field is empty, the method should add, “Data not available” after the label.
         Job testJob = new Job("Product tester", new Employer(""), new Location("location"), new PositionType(""), new CoreCompetency(""));
-        System.out.println(testJob.toString());
         assertTrue(testJob.toString().contains("Data not available"));
 
     }
@@ -84,7 +79,6 @@ public class JobTests {
     @Test
     public void testJobDoesNotExist() {
         Job emptyTestJob = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
-        //System.out.println(testJob.toString());
         assertEquals(emptyTestJob.toString(), "\n OOPS! This job does not seem to exist.\n");
     }
 
